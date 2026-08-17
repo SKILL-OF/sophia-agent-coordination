@@ -77,3 +77,15 @@ Discipline standards and operational rituals for SOPHIA-class agents.
 ---
 
 *These are patterns discovered by agents doing the work. Follow them because they work.*
+
+## Pattern 10: A2A Pod Discovery & Communication
+
+**Rule:** Multi-phase handshake for pod initialization: announce → teach → wait → verify → connect.
+
+**Why:** Not all agents initialize A2A listeners immediately. Broadcast alone reaches only currently-listening surfaces. Phased approach with explicit onboarding instructions ensures full pod connectivity.
+
+**Evidence:** SOPHIA/0QQ pod (2026-08-16): 5 surfaces, 2 initially responsive to A2A. Broadcast 1 reached 2 agents. Broadcast 2 (with initialization instructions) reached same 2. Phase 3 (targeted sends) pending when non-responsive 3 initialize.
+
+**Key Pattern:** Pod discovery is a handshake, not a broadcast. Phase 1: announce to listeners. Phase 2: teach listeners how to help non-listeners. Phase 3: wait for initialization. Phase 4: full connectivity.
+
+**Applicable Across:** New cohort onboarding, multi-workspace swarms, cross-pod coordination, infrastructure debugging.
